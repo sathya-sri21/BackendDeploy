@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md bg-white rounded-2xl shadow-xl p-8">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">
+        Create Account
+      </h2>
+
+      <form action="signup_handler" method="POST" class="space-y-4">
+        <!-- First Name -->
+        {% csrf_token %}
+        <div>
+          <label class="block text-gray-700 font-medium mb-1" for="firstname"
+            >First Name</label
+          >
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="John"
+            class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+        </div>
+
+        <!-- Last Name -->
+        <div>
+          <label class="block text-gray-700 font-medium mb-1" for="lastname"
+            >Last Name</label
+          >
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="Doe"
+            class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+        </div>
+
+        <!-- Username -->
+        <div>
+          <label class="block text-gray-700 font-medium mb-1" for="username"
+            >Username</label
+          >
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="johndoe123"
+            class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block text-gray-700 font-medium mb-1" for="email"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label class="block text-gray-700 font-medium mb-1" for="password"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••"
+            class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+        </div>
+
+        <!-- Confirm Password -->
+        <div>
+          <label
+            class="block text-gray-700 font-medium mb-1"
+            for="confirmPassword"
+            >Confirm Password</label
+          >
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="••••••••"
+            class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+        </div>
+
+        <!-- Signup Button -->
+        <button
+          type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition duration-200"
+        >
+          Sign Up
+        </button>
+      </form>
+
+      <p class="text-center text-gray-600 text-sm mt-4">
+        Already have an account?
+        <a href="#" class="text-blue-600 hover:underline">Login</a>
+      </p>
+    </div>
+  </body>
+</html>
